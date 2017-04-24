@@ -1,0 +1,74 @@
+﻿@model admin_lovelypa_in.MPA_CURRENT_SEMESTER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MPA_CURRENT_SEMESTER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MPA_USER_DATA.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPA_USER_DATA.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_updated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duty_leave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duty_leave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.present)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.present)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model admin_lovelypa_in.MPA_TERM_DATA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MPA_TERM_DATA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MPA_TERMS.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPA_TERMS.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.credit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

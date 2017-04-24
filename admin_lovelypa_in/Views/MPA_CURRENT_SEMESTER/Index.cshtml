@@ -1,0 +1,69 @@
+﻿@model IEnumerable<admin_lovelypa_in.MPA_CURRENT_SEMESTER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MPA_USER_DATA.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_updated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duty_leave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.present)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MPA_USER_DATA.user_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duty_leave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.present)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

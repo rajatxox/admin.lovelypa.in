@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Admin Portal : www.lovelypa.in</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Admin: My Personal Assistant", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Data Base
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("AI Questions", "Index", "MPA_AI_QUESTIONS")</li>
+                                <li>@Html.ActionLink("Basic Symptom", "Index", "MPA_BASIC_SYMPTOM")</li>
+                                <li>@Html.ActionLink("CGPA Attendance", "Index", "MPA_CGPA_ATTENDANCE")</li>
+                                <li>@Html.ActionLink("Current Semester", "Index", "MPA_CURRENT_SEMESTER")</li>
+                                <li>@Html.ActionLink("Detailed Symptom", "Index", "MPA_DETAILED_SYMPTOM")</li>
+                                <li>@Html.ActionLink("Diet Chart", "Index", "MPA_DIET_CHART")</li>
+                                <li>@Html.ActionLink("Mpa Disease", "Index", "MPA_DISEASE")</li>
+                                <li>@Html.ActionLink("Disease Basic Symptom", "Index", "MPA_DISEASE_BASIC_SYMPTOM")</li>
+                                <li>@Html.ActionLink("Disease Detailed Symptom", "Index", "MPA_DISEASE_DETAILED_SYMPTOM")</li>
+                                <li>@Html.ActionLink("My Expenses", "Index", "MPA_MY_EXPENSES")</li>
+                                <li>@Html.ActionLink("Secret Question", "Index", "MPA_SECRET_QUESTION")</li>
+                                <li>@Html.ActionLink("Term Data", "Index", "MPA_TERM_DATA")</li>
+                                <li>@Html.ActionLink("Terms", "Index", "MPA_TERMS")</li>
+                                <li>@Html.ActionLink("Time Table", "Index", "MPA_TIME_TABLE")</li>
+                                <li>@Html.ActionLink("User Data", "Index", "MPA_USER_DATA")</li>
+                                <li>@Html.ActionLink("User Diet Plan", "Index", "MPA_USER_DIET_PLAN")</li>
+                            </ul>
+                        </li>
+                    }
+
+
+
+
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - www.lovelypa.in</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

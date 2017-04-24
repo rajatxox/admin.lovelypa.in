@@ -1,0 +1,69 @@
+﻿@model IEnumerable<admin_lovelypa_in.MPA_TIME_TABLE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MPA_USER_DATA.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.class_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_from)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time_to)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_number)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MPA_USER_DATA.user_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.class_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_from)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_to)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.day)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_number)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

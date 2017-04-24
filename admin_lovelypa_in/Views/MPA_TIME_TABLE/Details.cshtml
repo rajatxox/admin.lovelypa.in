@@ -1,0 +1,74 @@
+﻿@model admin_lovelypa_in.MPA_TIME_TABLE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MPA_TIME_TABLE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MPA_USER_DATA.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MPA_USER_DATA.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.class_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.class_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_from)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_from)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time_to)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_to)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_number)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
